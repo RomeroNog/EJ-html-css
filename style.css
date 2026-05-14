@@ -1,0 +1,7 @@
+.div-da-nav{
+    background-color: rgb(255, 136, 0); 
+    height: 150px;
+}
+.menu {
+    display: flex; gap: 10px; list-style: none;
+    font-size: 30px; color: rgb(7, 178, 4);
