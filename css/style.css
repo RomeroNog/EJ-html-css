@@ -106,17 +106,16 @@ body {
 .conteiner_card{
     display: flex; 
     justify-content: center;
-    gap: 10px;
-    padding: 0px;
-    flex-wrap: wrap;
     align-items: flex-start;
-    margin:0;
+    gap: 20px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 300px; height: 400px;
 
     border-radius: 8px ;
