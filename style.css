@@ -1,7 +1,204 @@
+    :root {
+    --cor-fundo-claro: #eeeeee;
+    --cor-azul-pet: #8ccce2;
+    --cor-marrom-claro: #caa86b;
+    --cor-amarelo-pastel: #e6d891;
+    --cor-verde-pet: #9bcc71;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0; rgb(199, 181, 161);
+    padding: 0;
+}
+
+
 .div-da-nav{
-    background-color: rgb(255, 136, 0); 
+    background-color: var(--cor-fundo-claro); 
     height: 150px;
+    margin: 0; padding: 0;
+    border-bottom: 5px;
+}
+#Logo {
+    border-radius: 50%;
+    padding: 10px;
 }
 .menu {
-    display: flex; gap: 10px; list-style: none;
+    display: flex; list-style: none;
+    gap: 15px;
     font-size: 30px; color: rgb(7, 178, 4);
+    margin: 0; padding: 0;
+}
+.conteudo {
+    background-color: var(--cor-fundo-claro); 
+    min-height: 400px;
+    margin: 0; padding: 0;
+}
+
+
+.inicio {
+    background-color: var(--cor-marrom-claro); 
+    min-height: 150px;
+    margin: 0; padding: 10px;
+    text-align: center;
+}
+.div_inicio {
+    display: flex; 
+    flex: 1 2;
+    gap: 10px;
+    justify-content: center; align-items: center;
+    margin-top: 20px;
+}
+
+#inicio-cachorro {
+    border: solid 2px rgb(7, 178, 4);
+    border-radius: 10px;
+    width: 250px; height: 150px;
+}
+#texto_inicio {
+    font-size: 20px; color: rgb(0, 0, 0);
+    text-align: justify;
+    padding: 5px;
+}
+.div_inicio_img {
+    width: 400px; height: 250px;
+    display: flex; gap: 20px;
+    justify-content: center; align-items: center;
+}
+
+
+.sobre-nos {
+    background-color: var(--cor-amarelo-pastel); 
+    min-height: 400px;
+    margin: 0; padding: 10px;
+    text-align: center;
+}
+#texto_sobrenos {
+    font-size: 20px; color: rgb(0, 0, 0);
+    text-align: justify;
+    padding: 5px;
+}
+.classe_sobrenos {
+    display: flex; gap: 20px;
+    justify-content: center; align-items: center;
+}
+#sobrenos1{
+    width: 400px; height: 250px;
+    border-radius: 5px ;
+    border: 2px solid rgb(7, 178, 4);
+}
+#sobrenos2{
+    width: 400px; height: 250px;
+    border-radius: 5px ;
+    border: 2px solid rgb(7, 178, 4);
+    right: 300px;
+}
+
+
+.servicos {
+    background-color: var(--cor-marrom-claro); 
+    min-height: 400px;
+    margin: 0; padding: 10px;
+    text-align: center;
+}
+.conteiner_card{
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; height: 400px;
+
+    border-radius: 8px ;
+    border: 2px solid rgb(7, 178, 4);
+    background-color: var(--cor-azul-pet);
+    padding: 10px;
+}
+#img-banho-tosa {
+    width: 100%; height: 200px;
+    border-radius: 5px;
+    margin-top: 20%;
+}
+#img-consulta-veterinaria{
+    width: 100%; height: 200px;
+    border-radius: 5px;
+    margin-top: 20%;
+}
+#img-vacinacao {
+    width: 100%; height: 200px;
+    border-radius: 5px;
+    margin-top: 20%;
+}
+.clique-aqui{
+    margin-top: 10%;
+    padding: 10px 20px;
+    background-color: rgb(7, 178, 4);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+.depoimentos {
+    background-color: var(--cor-amarelo-pastel); 
+    min-height: 400px;
+    margin: 0; padding: 10px;
+}
+#img-joao{
+    width: 40%; height: 80px;
+    border-radius: 30px;
+    margin-top: 2%;
+}
+#img-nathalia{
+    width: 40%; height: 80px;
+    border-radius: 30px;
+    margin-top: 2%;
+}
+#img-marcos{
+    width: 40%; height: 80px;
+    border-radius: 30px;
+    margin-top: 2%;
+}
+#img-julia{
+    width: 40%; height: 80px;
+    border-radius: 30px;
+    margin-top: 2%;
+}
+.cliente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; height: 340px;
+
+    border-radius: 8px ;
+    border: 2px solid rgb(7, 178, 4);
+    background-color:var(--cor-azul-pet);
+    padding: 10px;
+}
+.cliente-card{
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: var(--cor-fundo-claro); 
+    min-height: 100px;
+    margin: 0; padding: 10px;
+    text-align: center;
+}
