@@ -1,26 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetShop PetVida</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fontes Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Ícones Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
     <nav class="navbar">
-        <div class="div-da-nav" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-            <div class="logo"> 
-                <img src="https://img.magnific.com/vetores-premium/modelo-de-logotipo-de-pet-shop_416562-928.jpg" alt="logo"
-                    height="150px"; width="190px"; />
+        <div class="div-da-nav">
+            <div class="logo">
+                <img id="Logo" src="img/logo_petshop.avif" alt="logo" height="150px" ; width="190px" ; />
             </div>
-            <div><ul class="menu">
-                <li>Inicio</li>
-                <li>Sobre Nós</li>
-                <li>Serviços</li>
-                <li>Depoimentos</li>
-                <li>Contato</li>
-            </ul></div>
+            <div>
+                <ul class="menu">
+                    <li><a href="#inicio">INÍCIO</a></li>
+                    <li><a href="#sobre-nos">SOBRE NÓS</a></li>
+                    <li><a href="#servicos">SERVIÇOS</a></li>
+                    <li><a href="#depoimentos">DEPOIMENTOS</a></li>
+                    <l1><a href="#feedback">AVALIE-NOS</a></l1>
+                    <li><a href="#contato">CONTATOS</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+    <section id="inicio" class="conteudo">
+        <div class="inicio">
+            <h1 class="font_title">
+                PetShop PetVida: Cuidando do seu melhor amigo com amor e dedicação
+            </h1>
+            <div class="div_inicio">
+                <p id="texto_inicio">
+                    Na PetShop PetVida, acreditamos que pets fazem parte da família e merecem todo carinho,
+                    cuidado e atenção. Nosso compromisso é oferecer produtos de qualidade, serviços
+                    especializados e um atendimento acolhedor para garantir saúde, bem-estar e
+                    felicidade ao seu melhor amigo. Aqui, cada detalhe é pensado com amor e dedicação para
+                    proporcionar a melhor experiência para você e seu pet.
+                </p>
+                <div class="div_inicio_img">
+                    <img id="inicio-cachorro" src="img/inicio_cachorro.jpg" alt="Cachorro no PetShop">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sobre-nos">
+        <div class="sobre-nos">
+            <h1 class="font_title">
+                Sobre Nós
+            </h1>
+            <p id="texto_sobrenos">
+                A PetShop PetVida nasceu para oferecer praticidade e cuidado de qualidade aos
+                tutores e seus pets. Entre nossos principais serviços estão o banho e tosa,
+                realizado com todo carinho e atenção ao conforto do animal; as consultas veterinárias,
+                focadas na saúde e prevenção; e a vacinação, essencial para manter seu melhor amigo
+                protegido e saudável. Além disso, valorizamos a confiança de nossos clientes,
+                refletida nas avaliações e depoimentos positivos de quem já conhece e aprova nossos
+                serviços.
+            </p>
+            <div class="imgs_sobrenos">
+                <img id="sobrenos1" src="img/sobrenos_1.jfif" alt="Banho e Tosa">
+                <img id="sobrenos2" src="img/sobrenos_2.jpg" alt="Consulta Veterinária">
+            </div>
+        </div>
+    </section>
+    <section id="servicos">
+        <div class="servicos">
+            <h1 class="font_title">
+                Nossos Serviços
+            </h1>
+            <div class="conteiner_card">
+                <div class="card" id="ca1">
+                    <h3>Banho e Tosa</h3>
+                    <img id="img-banho-tosa" src="img/banhoTosa.jfif" alt="Banho e Tosa">
+                    <p class="clique-aqui">Clique Aqui e Saiba mais</p>
+                </div>
+                <div class="card" id="ca2">
+                    <h3>Consulta Veterinária</h3>
+                    <img id="img-consulta-veterinaria" src="img/consulta_veterinaria.jfif" alt="Consulta Veterinária">
+                    <p class="clique-aqui">Clique Aqui e Saiba mais</p>
+                </div>
+                <div class="card" id="ca3">
+                    <h3>Vacinação</h3>
+                    <img id="img-vacinacao" src="img/vacinacao.jfif" alt="Vacinação">
+                    <p class="clique-aqui">Clique Aqui e Saiba mais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="depoimentos">
+        <div class="depoimentos">
+            <h1 class="font_title">
+                Avaliações dos nossos clientes
+            </h1>
+            <div class="cliente-card">
+                <div class="cliente" id="c1">
+                    <img id="img-joao" src="img/joao-foto-depoimento.png" alt="João">
+                    <p class="depoimento" style="text-align: justify;">"Atendimento veterinário nota 10! Salvou o meu
+                        gatinho em uma emergência recente. A equipe foi extremamente cuidadosa, fez todos os exames
+                        necessários e explicou cada etapa do tratamento de forma muito clara. É nítido o amor e respeito
+                        que eles têm pelos animais."</p>
+                    <h4>-João Felipe</h4>
+                </div>
+                <div class="cliente" id="c2">
+                    <img id="img-nathalia" src="img/nathalia-foto-depoimento.webp" alt="Nathalia">
+                    <p class="depoimento" style="text-align: justify;">"O serviço de banho e tosa é espetacular! O meu
+                        Snoopy sempre volta super cheiroso, com a pelagem macia e o corte impecável. O que eu mais amo é
+                        o cuidado e a paciência que a equipe tem com ele, já que ele é um pouco medroso. Saio de lá
+                        tranquila."</p>
+                    <h4>-Nathalia Alonso</h4>
+                </div>
+                <div class="cliente" id="c3">
+                    <img id="img-marcos" src="img/marcos-foto-depoimento.webp" alt="Marcos">
+                    <p class="depoimento" style="text-align: justify;">"O espaço físico é maravilhoso, super amplo,
+                        climatizado e extremamente limpo. Não tem aquele cheiro forte característico de alguns petshops.
+                        Adoro que a área do banho e tosa tem vidros grandes, permitindo que a gente acompanhe todo o
+                        processo do lado de fora."</p>
+                    <h4>-Marcos dos Santos</h4>
+                </div>
+                <div class="cliente" id="c4">
+                    <img id="img-julia" src="img/julia-foto-depoimento.webp" alt="Júlia">
+                    <p class="depoimento" style="text-align: justify;">"Levei o meu filhote para atualizar o protocolo
+                        de vacinas e fiquei encantada. O veterinário foi super paciente, usou técnicas para distrair o
+                        meu cão e ele nem sentiu a picada! Além disso, a carteirinha digital deles ajuda muito a não
+                        esquecer as próximas doses."</p>
+                    <h4>-Júlia Medeiros</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feedback">
+        <div class="feedback">
+            <h1 class="font_title">Deixe seu Feedback!</h1>
+            <p id="fbk_text">Sua opinião faz toda a diferença para nós! 
+                Se você e seu pet tiveram uma boa experiência em nosso petshop, deixe sua avaliação no site. Além de
+                ajudar nossa equipe a melhorar cada vez mais, seu comentário também auxilia outros tutores a escolherem
+                um lugar de confiança para seus melhores amigos.    </p>
+            
+            <form>
+                <textarea placeholder="Digite sua avaliação"></textarea>
+
+                <button type="submit">
+                    Enviar avaliação
+                </button>
+            </form>
+        </div>
+    </section>
+    <section id=contato>
+        <footer class="footer">
+            <p class="footer_font">© 2024 PetShop PetVida. Todos os direitos reservados.</p>
+                <div class="redes_socias">
+            <i class="bi bi-whatsapp">
+                <a href= "https://web.whatsapp.com"> WhatsApp</a><br>
+            </i>
+            <i class="bi bi-instagram" >
+                <a href= "https://instagram.com"> Instagram</a><br>
+            </i>
+            <i class="bi bi-facebook" >
+                <a href= "https://facebook.com"> Facebook</a>
+            </i>
+            </div>
+        </footer>
+    </section>
 </body>
 </html>
