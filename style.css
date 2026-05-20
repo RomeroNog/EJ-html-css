@@ -14,11 +14,14 @@ body {
     margin: 0; rgb(199, 181, 161);
     padding: 0;
 }
+.navbar{
+    position: fixed;
+}
 .div-da-nav{
      background-color: var(--cor-fundo-claro);
-
+    width: 1640px;
     height: 100px;
-
+    position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,6 +46,7 @@ body {
     background-color: var(--cor-fundo-claro); 
     min-height: 400px;
     margin: 0; padding: 0;
+    padding-top: 100px;
 }
 
 .inicio {
@@ -51,6 +55,9 @@ body {
     margin: 0; padding: 10px;
     text-align: center;
     min-height:400px;
+}
+#inicio{
+    scroll-margin-top: 100px;
 }
 .div_inicio {
     display: flex; 
@@ -83,6 +90,9 @@ body {
     margin: 0; padding: 10px;
     text-align: center;
 }
+#sobre-nos{
+    scroll-margin-top: 100px;
+}
 #texto_sobrenos {
     font-size: 20px; color: rgb(0, 0, 0);
     text-align: justify;
@@ -110,6 +120,9 @@ body {
     min-height: 400px;
     margin: 0; padding: 10px;
     text-align: center;
+}
+#servicos{
+    scroll-margin-top: 100px;
 }
 .conteiner_card{
     display: flex; 
@@ -159,6 +172,9 @@ body {
     min-height: 350px;
     margin: 0; padding: 10px;
     text-align: center;
+}
+#depoimentos{
+    scroll-margin-top: 100px;
 }
 #img-joao{
     width: 40%; height: 80px;
@@ -246,7 +262,9 @@ html {
     text-align: center;
     min-height:400px;   
 }
-
+#feedback{
+    scroll-margin-top: 100px;
+}
 #fbk_text{
     font-size: 20px; color: rgb(0, 0, 0);
     text-align: justify;
@@ -268,6 +286,9 @@ textarea {
     resize: none;
     border-radius: 5px;
     border: 1px solid #ccc;     
+}
+#contato{
+    scroll-margin-top: 100px;
 }
 .bi-whatsapp {
     color: rgb(7, 178, 4)
