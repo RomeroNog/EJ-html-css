@@ -115,4 +115,49 @@ body {
     opacity: 0;
     pointer-events: none; 
 }
-    
+.caixa-logins{
+    background-color: #9fd3e6;
+    width: 220px;
+    border-radius: 20px;
+    padding: 20px;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.lista-logins h3{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.lista{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.usuario{
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid black;
+
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.img-usuario img{
+    width: 30px;
+    height: 30px;
+}
+
+.texto-usuario{
+    margin-left: 12px;
+    text-align: left;
+}
+
+.texto-usuario p{
+    margin: 3px 0;
+}
