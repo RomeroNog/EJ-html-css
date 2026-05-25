@@ -72,13 +72,13 @@ function renderizarCarrinho(){
       totalEl.textContent = formatarMoeda(calcularTotal());
 }
 
-
+const LIMITE_POR_ITEM = 3;
 const catalogo = [
-    { id: 1, nome: "Ração Pedigree",      preco: 65.00  },
-    { id: 2, nome: "Tapete Higiênico",    preco: 40.00  },
-    { id: 3, nome: "Remédio para Pulgas", preco: 100.00 },
-    { id: 4, nome: "Brinquedo de Corda",  preco: 30.00  },
-    { id: 5, nome: "Torre para Gatos",    preco: 350.00 },
+    { id: 1, nome: "Ração Pedigree",      preco: 65.00,  estoque: LIMITE_POR_ITEM  },
+    { id: 2, nome: "Tapete Higiênico",    preco: 40.00,  estoque: LIMITE_POR_ITEM  },
+    { id: 3, nome: "Remédio para Pulgas", preco: 100.00,  estoque: LIMITE_POR_ITEM },
+    { id: 4, nome: "Brinquedo de Corda",  preco: 30.00,  estoque: LIMITE_POR_ITEM  },
+    { id: 5, nome: "Torre para Gatos",    preco: 350.00,  estoque: LIMITE_POR_ITEM },
 ];
 
 let carrinho = [];
@@ -86,20 +86,37 @@ let carrinho = [];
 function adicionarAoCarrinho(id){
     const produto = catalogo.find(p => p.id === id);
     const itemExiste = carrinho.find(i => i.id === id);
-
+    if(produto.estoque <= 0){
+        mostrarToast(`${produto.nome} está esgotado!`);
+        return;
+    }
+    if(itemExiste && itemExiste.quantidade >= LIMITE_POR_ITEM){
+        mostrarToast(`${produto.nome} atingiu o limite ${LIMITE_POR_ITEM} itens de estoque!`);
+        return;
+    }
     if(itemExiste){
         itemExiste.quantidade++;
     } else{
         carrinho.push({...produto, quantidade: 1})
     }
-
+    produto.estoque--;
     mostrarToast(`${produto.nome} adicionado!`);
     renderizarCarrinho();
 }
 
 function incrementar(id){
     const item = carrinho.find(i => i.id === id);
+    const produto = catalogo.find(p => p.id === id);
+    if(produto.estoque <= 0){
+        mostrarToast(`${produto.nome} está esgotado!`);
+        return;
+    }
+    if(item.quantidade >= LIMITE_POR_ITEM){
+        mostrarToast(`${produto.nome} atingiu o limite ${LIMITE_POR_ITEM} itens de estoque!`);
+        return;
+    }
     if(item) item.quantidade++;
+    produto.estoque--;
     renderizarCarrinho();
 }
 
@@ -107,6 +124,8 @@ function decrementar(id){
     const indice = carrinho.findIndex(i => i.id === id);
     if(indice === -1) return;
 
+    const produto = catalogo.find(p => p.id === id);
+    produto.estoque++;
     carrinho[indice].quantidade--;
 
     if(carrinho[indice].quantidade <=0){
