@@ -16,12 +16,15 @@ body {
 }
 .navbar{
     position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 1000;
 }
 .div-da-nav{
      background-color: var(--cor-fundo-claro);
-    width: 1500px;
+    
     height: 100px;
-    position: sticky;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,6 +47,7 @@ body {
 }
 #inicio{
     scroll-margin-top: 100px;
+    padding-top: 130px;
 }
 #sobre-nos{
     scroll-margin-top: 100px;
@@ -370,17 +374,24 @@ background: var(--cor-azul-pet);
 .img-carrinho{
     height: 35px; width: 35px;
     color: var(--cor-verde-pet);
+    width: 30px;
 }
 .carrinho-nav{
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .qtd-span{
+    position: absolute;
+    top: -8px;
+    right: -10px;
     background-color: red;
     color: white;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    display: flex; justify-content: center;
+    display: flex;
     align-items: center;
-    top: 50%; right: -15px;
-    width: 20px; height: 20px;
-    position: absolute;
+    justify-content: center;
+    font-size: 12px;
 }
