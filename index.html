@@ -27,6 +27,7 @@
             <div class="logo">
                 <img id="Logo" src="img/logo_petshop.avif" alt="logo" height="150px" ; width="190px" ; />
             </div>
+            <div>
                 <ul class="menu">
                     <li><a href="#inicio">INÍCIO</a></li>
                     <li><a href="#sobre-nos">SOBRE NÓS</a></li>
@@ -35,9 +36,10 @@
                     <l1><a href="#feedback">AVALIE-NOS</a></l1>
                     <li><a href="#produtos">PRODUTOS</a></li>
                     <li><a href="#contato">CONTATOS</a></li>
-                    <li class="carrinho-nav"><a href="#carrinho"><img class="img-carrinho" src="img/carrinho.png.png"><span class="qtd-span">0</span></a></li>
+                    <div class="carrinho-nav"><li><button id="botao-abrir-carrinho" onclick="abrirCarrinho()"><a href="#carrinho"><img class="img-carrinho" src="img/carrinho.png.png"><span class="qtd-span">0</span></a></button></li></div>
                 </ul>
             </div>
+        </div>
     </nav>
     <section id="inicio" class="conteudo">
         <div class="inicio">
@@ -168,31 +170,31 @@
                 <img src="img/racao.png" alt="Ração">
                 <h3>Ração Pedigree</h3>
                 <p> R$ 65,00</p>
-                <button> Adicionar ao carrinho</button>
+                <button onclick="adicionarAoCarrinho(1)">Adicionar ao carrinho</button>
             </div>
             <div class="card_loja">
                 <img src="img/tapete_higienico.png" alt="Tapete">
                 <h3>Tapete Higiênico</h3>
                 <p> R$ 40,00</p>
-                <button> Adicionar ao carrinho</button>
+                <button onclick="adicionarAoCarrinho(2)">Adicionar ao carrinho</button>
             </div>
             <div class="card_loja">
                 <img src="img/remedio_pulgas.png" alt="Remédio">
                 <h3>Remédio para Pulgas</h3>
                 <p> R$ 100,00</p>
-                <button> Adicionar ao carrinho</button>
+                <button onclick="adicionarAoCarrinho(3)">Adicionar ao carrinho</button>
             </div>
             <div class="card_loja">
                 <img src="img/brinquedo_de_corda.webp" alt="Brinquedo">
                 <h3>Brinquedo de Corda</h3>
                 <p> R$ 30,00</p>
-                <button> Adicionar ao carrinho</button>
+                <button onclick="adicionarAoCarrinho(4)">Adicionar ao carrinho</button>
             </div>
             <div class="card_loja">
                 <img src="img/torre-para-gatos.webp" alt="Torre">
                 <h3>Torre para Gatos</h3>
                 <p> R$ 350,00</p>
-                <button> Adicionar ao carrinho</button>
+                <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button>
             </div>
         </div>
     </section>
@@ -213,7 +215,27 @@
             </div>
         </footer>
     </section>
-    <div></div>
+    <div id="toast"></div>
+<div id="overlay" onclick="fecharCarrinho()"></div>
+<div id="carrinho-drawer">
+    <div class="carrinho-cabecalho">
+      <h2>Meu Carrinho</h2>
+      <button id="botao-fechar-carrinho" onclick="fecharCarrinho()">✕</button>
+    </div>
+    <div class="carrinho-corpo">
+        <ul id="lista-itens"></ul>
+        <!--aqui essa lista ta vazia pq o javascript vai colocar os itens-->
+    </div>
+    <div class="carrinho-footer">
+        <div class="carrinho-total">
+            <span>TOTAL:</span>
+            <span id="total-compra">R$ 0,00</span>
+        </div>
+        <button id="botao-finalizar-compra" onclick="finalizarCompra()" disabled>
+            Finalizar Compra
+        </button>
+    </div>
+</div>
+    <script src="javascript/CarrinhoJs.js"></script>
 </body>
-
 </html>
